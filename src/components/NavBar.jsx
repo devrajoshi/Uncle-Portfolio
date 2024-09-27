@@ -32,15 +32,15 @@ const NavBar = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full h-16 px-4 bg-black text-white fixed">
+    <div className="flex justify-between items-center w-full h-20 px-4 bg-black text-white fixed z-50">
       <div>
         <h1 className="font-signature text-2xl whitespace-nowrap">
           Dr. Dirgha Raj Joshi
         </h1>
       </div>
       {/* Desktop Menu */}
-      <div flex justify-evenly>
-        <ul className="hidden md:!flex">
+      <div flex justify-between>
+        <ul className="hidden lg:!flex">
           {links.map(({ id, link }) => (
             <li
               key={id}
@@ -59,14 +59,14 @@ const NavBar = () => {
       {/* Hamburger Menu */}
       <div
         onClick={() => setNav(!nav)}
-        className="pr-4 z-10 cursor-pointer text-gray-400 hover:scale-105 hover:text-yellow-400 duration-200 md:hidden"
+        className="pr-4 z-10 cursor-pointer text-gray-400 hover:scale-105 hover:text-yellow-400 duration-200 lg:hidden"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
       {/* Mobile Menu */}
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-400 md:hidden">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-400 lg:hidden">
           {links.map(({ id, link }) => (
             <li
               key={id}
