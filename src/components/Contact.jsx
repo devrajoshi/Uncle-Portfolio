@@ -3,7 +3,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 
 const Contact = () => {
   return (
-    <div name="contact" className="w-full text-white">
+    <div name="contact" className="w-full h-screen py-20 text-white">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8 text-center">
           <p className="text-4xl font-bold inline border-b-4 border-gray-400">
@@ -40,7 +40,7 @@ const Contact = () => {
               placeholder="Enter your message"
               required
             ></textarea>
-            <button className="text-white bg-gradient-to-r from-purple-700 to-indigo-800 px-6 py-2.5 my-8 mx-auto flex items-center rounded-md hover:scale-105 duration-300 font-bold">
+            <button className="text-white bg-gradient-to-r from-purple-700 to-indigo-800 px-6 py-2 my-8 mx-auto flex items-center rounded-md hover:scale-105 duration-300 font-bold">
               Submit <RiSendPlaneFill size={25} className="ml-2" />
             </button>
           </form>

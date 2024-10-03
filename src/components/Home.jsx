@@ -2,6 +2,7 @@ import React from "react";
 import home from "../assets/home.png";
 import { TypeAnimation } from "react-type-animation";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -48,12 +49,15 @@ const Home = () => {
             decisions and improve operational efficiency.
           </p>
           <div>
-            <button className="group bg-blue-800 hover:bg-blue-700 text-white font-bold px-6 py-3 my-2 flex justify-center items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-700">
-              Portfolio
-              <span className="group-hover:rotate-90 duration-300">
-                <MdOutlineKeyboardArrowRight size={25} />
-              </span>
-            </button>
+            {/* Add Link component to redirect to portfolio */}
+            <Link to="/publications">
+              <button className="group bg-blue-800 hover:bg-blue-700 text-white font-bold px-6 py-3 my-2 flex justify-center items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-700">
+                Publications
+                <span className="group-hover:rotate-90 duration-300">
+                  <MdOutlineKeyboardArrowRight size={25} />
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
         <div className="w-full md:w-1/3">

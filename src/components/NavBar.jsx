@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -7,27 +8,33 @@ const NavBar = () => {
   const links = [
     {
       id: 1,
-      link: "Home",
+      link: "home",
+      path: "/",
     },
     {
       id: 2,
-      link: "About",
+      link: "about",
+      path: "/about",
     },
     {
       id: 3,
-      link: "Gallery",
+      link: "gallery",
+      path: "/gallery",
     },
-    {
-      id: 4,
-      link: "Publications",
-    },
+    // {
+    //   id: 4,
+    //   link: "portfolio",
+    //   path: "/portfolio",
+    // },
     {
       id: 5,
-      link: "Projects",
+      link: "publications",
+      path: "/publications",
     },
     {
       id: 6,
-      link: "Contact",
+      link: "contact",
+      path: "/contact",
     },
   ];
 
@@ -38,23 +45,31 @@ const NavBar = () => {
           Dr. Dirgha Raj Joshi
         </h1>
       </div>
+
       {/* Desktop Menu */}
-      <div flex justify-between>
-        <ul className="hidden lg:!flex">
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer font-medium capitalize text-gray-400 hover:text-yellow-400 duration-200 relative group"
-            >
-              <span className="relative inline-block">
+      <ul className="hidden lg:!flex">
+        {links.map(({ id, link, path }) => (
+          <li
+            key={id}
+            className="px-4 cursor-pointer font-medium capitalize text-gray-400 hover:text-yellow-400 duration-200 group"
+          >
+            <span className="relative inline-block">
+              <NavLink
+                to={path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-yellow-400"
+                    : "text-gray-400 hover:text-yellow-400"
+                }
+              >
                 {link}
-                {/* Underline span */}
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+              </NavLink>
+              {/* Underline span */}
+              <span className="left-0 bottom-0 w-0 h-[2px] bg-yellow-400 transition-all duration-200 group-hover:w-full"></span>
+            </span>
+          </li>
+        ))}
+      </ul>
 
       {/* Hamburger Menu */}
       <div
@@ -67,12 +82,22 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-400 lg:hidden">
-          {links.map(({ id, link }) => (
+          {links.map(({ id, link, path }) => (
             <li
               key={id}
               className="px-4 cursor-pointer capitalize py-6 text-4xl hover:scale-105 hover:text-yellow-400"
             >
-              {link}
+              <NavLink
+                onClick={() => setNav(false)}
+                to={path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-yellow-400"
+                    : "text-gray-400 hover:text-yellow-400"
+                }
+              >
+                {link}
+              </NavLink>
             </li>
           ))}
         </ul>

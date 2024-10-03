@@ -37,8 +37,11 @@ function CarouselTransition() {
   ];
 
   return (
-    <div name="gallery" className="w-full h-screen text-white">
-      <div className="py-8 text-center flex flex-col justify-center items-center h-full w-full">
+    <div
+      name="gallery"
+      className="w-full min-h-screen bg-black pt-20 text-white overflow-hidden"
+    >
+      <div className="text-center flex flex-col justify-center items-center w-full">
         <div>
           <span>
             <p className="text-4xl font-bold inline border-b-4 border-gray-400">
@@ -49,23 +52,23 @@ function CarouselTransition() {
             Here are some memorable moments captured in the gallery below.
           </p>
         </div>
-        <div className="flex justify-center items-center h-full w-full">
+        <div className="flex justify-center items-center w-full h-[70vh]">
           <Carousel
             transition={{ duration: 2 }}
             autoplay={true}
             loop={true}
-            className="mx-4 rounded-xl h-full w-4/5"
+            className="mx-4 rounded-xl h-full w-4/5 lg:w-3/5"
           >
             {images.map(({ id, src, alt, caption, date }) => (
               <div
                 key={id}
                 className="flex flex-col justify-center items-center h-full"
               >
-                <div className="mb-4 text-center h-1/10">
+                <div className="mb-4 text-center">
                   <p className="text-lg font-caption">Date: {date}</p>
                   <p className="text-lg font-caption">Title: {caption}</p>
                 </div>
-                <div className="w-full h-9/10 overflow-hidden rounded-md">
+                <div className="w-full h-[50vh] lg:h-[60vh] overflow-hidden rounded-md">
                   <img
                     src={src}
                     alt={alt}

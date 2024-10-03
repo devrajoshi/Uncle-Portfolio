@@ -126,10 +126,10 @@ const Publications = () => {
   return (
     <div
       name="publications"
-      className="w-full text-white m-3 lg:px-20 py-8 md:h-screen sm:mx-0"
+      className="bg-black h-fit w-full text-white items-start px-3 lg:px-20 py-20 sm:mx-0"
     >
-      <div className="text-center max-w-screen-lg mx-auto flex flex-col justify-center w-full">
-        <div>
+      <div className="max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full">
+        <div className="pb-8 text-center">
           <p className="text-4xl font-bold inline border-b-4 border-gray-400">
             Publications
           </p>
@@ -154,7 +154,7 @@ const Publications = () => {
             }) => (
               <div
                 key={id}
-                className="mx-12 sm:mx-0 p-4 border border-indigo-600 rounded-md hover:scale-105 transition-transform duration-300"
+                className="bg-gray-900 m-0 md:mx-12 p-2 md:p-4 border border-indigo-600 rounded-md hover:scale-100 lg:hover:scale-105 transition-transform duration-300"
               >
                 {/* First Line: Published Year and Citations */}
                 <div className="flex justify-between text-sm font-semibold">
