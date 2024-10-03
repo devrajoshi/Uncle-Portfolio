@@ -3,7 +3,7 @@ import { RiSendPlaneFill } from "react-icons/ri";
 
 const Contact = () => {
   return (
-    <div name="contact" className="w-full h-screen py-20 text-white">
+    <div name="contact" className="w-full h-screen pt-20 text-white">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
         <div className="pb-8 text-center">
           <p className="text-4xl font-bold inline border-b-4 border-gray-400">
