@@ -8,6 +8,7 @@ const Home = lazy(() => import("./components/Home"));
 const About = lazy(() => import("./components/About"));
 const CarouselTransition = lazy(() => import("./components/Gallery"));
 const Publications = lazy(() => import("./components/Publications"));
+const MyWorks = lazy(() => import("./components/MyWorks"));
 const Services = lazy(() => import("./components/Services"));
 const Contact = lazy(() => import("./components/Contact"));
 const NotFound = lazy(() => import("./components/NotFound")); // Lazy load NotFound
@@ -25,6 +26,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<CarouselTransition />} />
             <Route path="/publications" element={<Publications />} />
+            <Route path="/my_works" element={<MyWorks />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
 
