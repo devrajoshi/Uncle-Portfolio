@@ -35,7 +35,11 @@ const About = () => {
   // ];
 
   return (
+<<<<<<< HEAD
     <div name="about" className="box-border w-full h-fit px-4 lg:pl-20 py-20">
+=======
+    <div name="about" className="box-border w-full h-screen px-4 lg:pl-20 py-20">
+>>>>>>> 0b0b52865744a9c09d82bacd3af82b596de66ca4
       <div className="flex flex-col items-center justify-center text-white">
         {/* Section Title */}
         <div className="pb-8 text-center">
@@ -49,6 +53,7 @@ const About = () => {
 
         {/* About Content */}
         <div className="w-full md:w-3/4 lg:w-2/3 shadow-lg">
+<<<<<<< HEAD
           <p className="text-gray-300  leading-relaxed">
             I am a faculty member at Mahendra Ratna Campus Tahachal, Tribhuvan
             University, Nepal. I completed my Ph.D. in education from Banaras
@@ -71,6 +76,13 @@ const About = () => {
             data analysis, thesis supervision, research project development,
             monitoring and evaluation of research projects, and test item
             writing
+=======
+          <p className="text-gray-300 text-center leading-relaxed">
+            I am a faculty member at Mahendra Ratna Campus Tahachal, Tribhuvan University, Nepal. I completed my Ph.D. in education from Banaras Hindu University, India, and my M.Ed. in mathematics education from Tribhuvan University. My research interests include educational technology, digital pedagogy, applied mathematics, quantitative research, item response theory (IRT), structural equation modeling (SEM), machine learning, and various issues related to digital pedagogy. I have been actively involved in facilitating digital pedagogy, mathematics teaching-related software and applications, and quantitative data analysis tools such as SPSS and JASP.
+          </p>
+          <p className="text-gray-300 text-center leading-relaxed mt-4">
+            I also work with structural equation modeling tools like AMOS, referencing tools like Mendeley and Zotero, qualitative data analysis tools like Atlas.ti, academic/scientific writing, and other teaching-learning and research-related software and applications. Additionally, I have substantial experience in curriculum development, report writing, data analysis, thesis supervision, research project development, monitoring and evaluation of research projects, and test item writing.
+>>>>>>> 0b0b52865744a9c09d82bacd3af82b596de66ca4
           </p>
         </div>
 
