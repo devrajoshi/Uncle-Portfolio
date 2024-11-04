@@ -1,71 +1,107 @@
 import React from "react";
-import home from "../assets/home.png";
+import "../index.css";
+import { Link } from "react-router-dom";
+import heroImage from "../assets/heroImage.uncle.png";
 import { TypeAnimation } from "react-type-animation";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { Link } from "react-router-dom";
+import facebookIcon from "../assets/social icons/facebook.svg";
+import xIcon from "../assets/social icons/x.svg";
+import linkedinIcon from "../assets/social icons/linkedin.svg";
 
 const Home = () => {
   return (
-    <div
-      name="home"
-      className="box-border h-screen w-full pl-3 lg:pl-20"
-    >
-      <div className="w-full columns-2 flex items-center justify-center h-full flex-row">
-        <div className="w-full flex flex-col justify-center h-full text-white">
-          <h4 className="text-2xl flex justify-centent text-center sm:text-left text-yellow-400">
-            HELLO!
-          </h4>
-          <h2 className="text-3xl">
-            I'm{" "}
-            <span className="font-heading font-semibold text-yellow-100 text-4xl">
-              <u className="bg-gradient-to-r from-black to-blue-800 border-gray-500 border-r-4 rounded-md pr-2">
-                Dr. Dirgha Raj Joshi
-              </u>
-            </span>
-          </h2>
+    <div name="home" className="box-border h-screen w-full px-4 lg:pl-20">
+      <div className="flex flex-col md:flex-row items-center justify-center h-full gap-0 md:gap-16">
+        {/* Hero Image Section */}
+        <div className="w-full md:w-2/5 flex justify-center md:justify-end mb-6 md:mb-0">
+          <img
+            src={heroImage}
+            alt="profile"
+            className="w-48 md:h-auto object-cover rounded-md shadow-[10px_10px_20px_5px_rgba(3,43,226,0.6)] transition-shadow duration-300 ease-in-out"
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="w-full md:w-3/5 flex flex-col justify-center text-center md:text-left text-white">
+          <h4 className="text-2xl text-yellow-400">HELLO!</h4>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              I'm{" "}
+              <span className="font-heading bg-gradient-to-r from-pink-600 via-violet-600 to-blue-500 inline-block text-transparent bg-clip-text">
+                Dr. Dirgharaj Joshi
+              </span>
+            </h2>
+          </div>
+
+          {/* Type Animation */}
           <TypeAnimation
             sequence={[
               "Data Analyst",
-              500,
+              1000,
               "Report Writer",
-              500,
+              1000,
               "Mentor",
-              500,
+              1000,
             ]}
-            style={{
-              fontSize: "2em",
-              fontWeight: "600",
-              color: "orange",
-              fontFamily: "animation",
-            }}
+            wrapper="h3"
+            className="text-2xl font-caption font-semibold text-orange-400 mt-2"
             repeat={Infinity}
           />
-          <p className="w-50%">
-            I have 4 years of experience as a data analyst, specializing in data
-            collection, cleaning, and analysis. I am proficient in statistical
-            techniques, data visualization tools such as Excel and SPSS, and
-            programming languages like R and Python. My focus is on transforming
-            complex datasets into actionable insights to support business
-            decisions and improve operational efficiency.
+
+          <p className="text-sm md:text-base mt-4 leading-relaxed max-w-lg mx-auto md:mx-0">
+            Data analyst with 4 years' experience in data cleaning, analysis,
+            and visualization (Excel, SPSS, R, Python), focused on transforming
+            data into actionable insights for informed decision-making.
           </p>
-          <div>
-            {/* Add Link component to redirect to portfolio */}
-            <Link to="/publications">
-              <button className="group bg-blue-800 hover:bg-blue-700 text-white font-bold px-6 py-3 my-2 flex justify-center items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-700">
-                Publications
+
+          {/* Social Links Section */}
+          <div className="flex justify-center md:justify-start items-center gap-4 my-4">
+            <a
+              href="https://www.linkedin.com/in/dr-dirgha-raj-joshi-570464129/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={linkedinIcon}
+                alt="LinkedIn"
+                className="w-10 h-10 hover:scale-110 duration-200"
+              />
+            </a>
+            <a
+              href="https://www.twitter.com/yourprofile"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={xIcon}
+                alt="X (formerly Twitter)"
+                className="w-10 h-10 hover:scale-110 duration-200"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/DrDirgha"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={facebookIcon}
+                alt="Facebook"
+                className="w-10 h-10 hover:scale-110 duration-200"
+              />
+            </a>
+          </div>
+
+          {/* buttons to redirect to the projects section and downloading resume */}
+          <div className="flex justify-center md:justify-normal gap-4">
+            <Link to="/my_works">
+              <button className="group bg-blue-800 hover:bg-blue-700 text-white font-bold px-4 py-2 my-2 flex justify-center items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-700 hover:from-blue-700 hover:to-cyan-500 duration-300">
+                My Works
                 <span className="group-hover:rotate-90 duration-300">
                   <MdOutlineKeyboardArrowRight size={25} />
                 </span>
               </button>
             </Link>
           </div>
-        </div>
-        <div className="w-full md:w-1/3">
-          <img
-            src={home}
-            alt="my profile"
-            className="h-3/5 md:h-full md:w-full"
-          ></img>
         </div>
       </div>
     </div>

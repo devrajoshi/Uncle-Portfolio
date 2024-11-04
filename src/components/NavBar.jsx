@@ -21,11 +21,11 @@ const NavBar = () => {
       link: "gallery",
       path: "/gallery",
     },
-    // {
-    //   id: 4,
-    //   link: "portfolio",
-    //   path: "/portfolio",
-    // },
+    {
+      id: 4,
+      link: "services",
+      path: "/services",
+    },
     {
       id: 5,
       link: "publications",
