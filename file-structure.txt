@@ -1,0 +1,12 @@
+src/
+├── assets/           # Images, icons, etc.
+├── components/       # Reusable UI components
+│   ├── common/       # Buttons, cards, etc.
+│   ├── layout/       # Layout components (Navbar, Footer)
+│   └── sections/     # Page sections
+├── hooks/            # Custom React hooks
+├── context/          # Context providers (theme, etc.)
+├── pages/            # Page components
+├── styles/           # Global styles
+├── utils/            # Utility functions
+└── animations/       # Animation configurations
